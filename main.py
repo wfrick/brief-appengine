@@ -27,12 +27,6 @@ from google.appengine.api import taskqueue
 import jinja2
 from sources import *
 
-#Set template directory
-template_dir = os.path.join(os.path.dirname(__file__), 'templates')
-#Set up jinja environment
-jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape=True)
-
-
 
 #Set template directory
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
