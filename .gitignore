@@ -1,6 +1,9 @@
 #Ignore API keys
 keys.py
 
+#Don't share compiled fles
+*.pyc
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
