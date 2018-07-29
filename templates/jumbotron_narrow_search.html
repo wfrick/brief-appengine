@@ -1,0 +1,44 @@
+<!-- extend from base layout -->
+{% extends "jumbotron_narrow.html" %}
+
+{% block content %}
+
+      <div class="jumbotron">
+        <form method="post" class="form-horizontal" role="form">
+        <br>
+        <div style="color: red">{{ URL_error }}</div>      
+       <h3>What do you want to search for?</h3> 
+        <input class="form-control input-lg" type="text" placeholder="Ex: minimum wage" name="term" value="{{ term }}">
+        <br>   
+       <h3>What sites do you want to search?</h3> 
+       <p><strong>Choose from Faction-approved sources:</strong></p>
+        <div class="form-check">
+          <label><input class="form-check-input" type="checkbox" value="1" name="thinktanks">Think tanks</label>
+        </div>
+        <div class="form-check">
+          <label><input class="form-check-input" type="checkbox" value="1" name="media">Trusted media</label>
+        </div>
+        <div class="form-check">
+          <label><input class="form-check-input" type="checkbox" value="1" name="univ_other">Universities & other expert sites</label>
+        </div>
+        <div class="form-check">
+          <label><input class="form-check-input" type="checkbox" value="1" name="explainers">"Explainer" sites</label>
+        </div>
+        
+
+        <!-- Select your own sites -->
+        <br>
+        <p><strong>Or choose your own sites to search:</strong></p>
+        <input class="form-control input-lg" type="text" placeholder="Ex: nytimes.com,washingtonpost.com" name="sites" value="">
+        <br>
+        <p>(Separate domains by comma: nytimes.com,washingtonpost.com)</p>
+        <br>
+
+        <div class="error"></div>
+        <input class="btn-large btn-success" type="submit">
+        <br>
+
+    </form>
+      </div>
+
+      {% endblock %}

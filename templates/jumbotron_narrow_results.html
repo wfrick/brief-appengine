@@ -1,0 +1,12 @@
+<!-- extend from base layout -->
+{% extends "jumbotron_narrow.html" %}
+
+{% block content %}
+
+{% for result in results %}
+<p><h4><a href="{{result.URL}}">{% print result.title %}</a></p></h4>
+<p><strong>{% print result.source %}</strong></p>
+<p>{{result.summary}}</p>
+{% endfor %}
+
+{% endblock %}
